@@ -1,7 +1,18 @@
 import * as React from 'react';
 import {UsersListProps} from './UsersListProps';
+import {UsersListState} from './UsersListState';
 
 
-export const UsersList: React.FC<UsersListProps> = (props) => {
-    return <div>UsersList</div>
-};
+export class UsersList extends React.Component<UsersListProps, UsersListState> {
+
+    constructor(props: UsersListProps) {
+        super(props);
+        this.setState({
+            usersList: [],
+        });
+    }
+
+    render() {
+        return <div>{this.props.currentUserList}</div>
+    }
+}
