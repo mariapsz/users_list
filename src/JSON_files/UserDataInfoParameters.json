@@ -1,0 +1,14 @@
+[
+  {
+    "parameterName": "nickName",
+    "validationRegexPattern": ".*"
+  },
+  {
+    "parameterName": "email",
+    "validationRegexPattern": ".*"
+  },
+  {
+    "parameterName": "IPAddress",
+    "validationRegexPattern": ".*"
+  }
+]
