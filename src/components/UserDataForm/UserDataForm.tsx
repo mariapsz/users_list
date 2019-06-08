@@ -2,7 +2,7 @@ import * as React from 'react';
 import {UserDataFormProps} from './UserDataFormProps';
 import {User} from '../../classes/User';
 import {UserDataFormState} from './UserDataFormState';
-
+import './UserDataForm.css';
 
 export class UserDataForm extends React.Component<UserDataFormProps, UserDataFormState> {
 
@@ -29,6 +29,11 @@ export class UserDataForm extends React.Component<UserDataFormProps, UserDataFor
                         email: e.target.value,
                     }
                 });
+                if (e.target.validity.typeMismatch) {
+                    e.target.setCustomValidity("sorry!");
+                } else {
+                    e.target.setCustomValidity("");
+                }
                 break;
             case 'IPAddress':
                 this.setState({
@@ -58,11 +63,11 @@ export class UserDataForm extends React.Component<UserDataFormProps, UserDataFor
                 </div>
                 <div>
                     <label>email</label>
-                    <input name='email' onChange={this.handleChange}/>
+                    <input name='email' onChange={this.handleChange} type='email'/>
                 </div>
                 <div>
                     <label>IPAddress</label>
-                    <input name='IPAddress' onChange={this.handleChange}/>
+                    <input name='IPAddress' onChange={this.handleChange} required pattern='^[0-255].[0-255].[0-255].[0-255]$'/>
                 </div>
                 <input type='submit' value='Submit'/>
             </form>
