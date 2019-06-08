@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {UserDataFormProps} from './UserDataFormProps';
-import {User} from '../../Types/User';
+import {User} from '../../classes/User';
 import {UserDataFormState} from './UserDataFormState';
 
 
@@ -8,42 +8,62 @@ export class UserDataForm extends React.Component<UserDataFormProps, UserDataFor
 
     constructor(props: UserDataFormProps) {
         super(props);
-        this.state = {};
+        this.state = {user: new User('', '', '')};
     }
 
     handleChange = (e: any) => {
-        let user: User = {
-            nickName: '234',
-            email: 'sd',
-            IPAddress: 'asds',
-        };
-
-        this.setState({
-            user,
-        })
+        console.log('e.target.value: ', e.target.value);
+        switch (e.target.name) {
+            case 'nickname':
+                this.setState({
+                    user: {
+                        ...this.state.user,
+                        nickName: e.target.value,
+                    }
+                });
+                break;
+            case 'email':
+                this.setState({
+                    user: {
+                        ...this.state.user,
+                        email: e.target.value,
+                    }
+                });
+                break;
+            case 'IPAddress':
+                this.setState({
+                    user: {
+                        ...this.state.user,
+                        IPAddress: e.target.value,
+                    }
+                });
+                break;
+        }
     };
 
     handleSubmit = (e: any) => {
-        console.log(e);
-
+        e.preventDefault();
         if (this.state.user) {
             this.props.handler(this.state.user);
         }
     };
 
-    getFormRows = (): JSX.Element[] => {
-        return this.props.userDataInfoParameters.map((param, i) => {
-            return <div key={i}>
-                <label>{param.parameterName}</label>
-                <input onChange={this.handleChange}/>
-            </div>;
-        });
-    };
 
     render() {
         return <div>
             <form onSubmit={this.handleSubmit}>
-                {this.getFormRows()}
+                <div>
+                    <label>nickname</label>
+                    <input name='nickname' onChange={this.handleChange}/>
+                </div>
+                <div>
+                    <label>email</label>
+                    <input name='email' onChange={this.handleChange}/>
+                </div>
+                <div>
+                    <label>IPAddress</label>
+                    <input name='IPAddress' onChange={this.handleChange}/>
+                </div>
                 <input type='submit' value='Submit'/>
             </form>
         </div>

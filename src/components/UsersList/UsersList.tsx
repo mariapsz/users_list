@@ -7,12 +7,30 @@ export class UsersList extends React.Component<UsersListProps, UsersListState> {
 
     constructor(props: UsersListProps) {
         super(props);
-        this.setState({
+        this.state = {
             usersList: [],
-        });
+        };
     }
 
+    getUsersList = (): JSX.Element[] => (
+      this.props.usersList.map((user, i) => (
+          <div key={i}>
+              <div>
+                  {user.nickName}
+              </div>
+              <div>
+                  {user.email}
+              </div>
+              <div>
+                  {user.IPAddress}
+              </div>
+          </div>
+      ))
+    );
+
     render() {
-        return <div>{this.props.currentUserList}</div>
+        return <div>
+            {this.getUsersList()}
+        </div>
     }
 }

@@ -1,5 +1,5 @@
-import {User} from '../../Types/User';
+import {User} from '../../classes/User';
 
 export interface UserDataFormState {
-    user?: User;
+    user: User;
 }

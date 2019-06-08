@@ -1,35 +1,35 @@
 import * as React from 'react';
-import {UserPageProps} from './UsersPageProps';
 import {UsersPageState} from './UsersPageState';
 import {UserDataForm} from '../UserDataForm/UserDataForm';
 import {UsersList} from '../UsersList/UsersList';
-import {User} from '../../Types/User';
+import {User} from '../../classes/User';
 
-export class UsersPage extends React.Component<UserPageProps, UsersPageState> {
+export class UsersPage extends React.Component<{}, UsersPageState> {
 
-    constructor(props: UserPageProps) {
+    constructor(props: any) {
         super(props);
         this.state = {usersList: []};
     }
 
-    handleUserSubmit(user: User) {
-        const currentUsers = this.state.usersList;
-        // warunek na istnienie
-        currentUsers.push(user);
-        // this.setState({
-        //     usersList: currentUsers,
-        // })
-    }
+    handleUserSubmit = (user: User) => {
+        if (this.state.usersList)
+            this.setState({
+                usersList: [...this.state.usersList, user],
+            });
+        else
+            this.setState({
+                usersList: [user],
+            });
+    };
 
     render() {
         return (
             <div>
                 <UserDataForm
                     handler={this.handleUserSubmit}
-                    userDataInfoParameters={this.props.userDataInfoParameters}
                     usersList={this.state.usersList}
                 />
-                <UsersList currentUserList={this.state.usersList}/>
+                <UsersList usersList={this.state.usersList}/>
             </div>)
     }
 }
