@@ -85,7 +85,9 @@ export class UserDataForm extends React.Component<UserDataFormProps, UserDataFor
     };
 
     handleFormState = (e: any) => {
-        console.log('e: full form ', e);
+        this.setState({
+            isDisabled:  !e.currentTarget.reportValidity(),
+        })
     };
 
     render() {
