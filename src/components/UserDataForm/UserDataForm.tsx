@@ -8,11 +8,13 @@ export class UserDataForm extends React.Component<UserDataFormProps, UserDataFor
 
     constructor(props: UserDataFormProps) {
         super(props);
-        this.state = {user: new User('', '', '')};
+        this.state = {
+            user: new User('', '', '')
+        };
     }
 
     handleChange = (e: any) => {
-        console.log('e.target.value: ', e.target.value);
+
         switch (e.target.name) {
             case 'nickname':
                 this.setState({
@@ -29,19 +31,41 @@ export class UserDataForm extends React.Component<UserDataFormProps, UserDataFor
                         email: e.target.value,
                     }
                 });
-                if (e.target.validity.typeMismatch) {
-                    e.target.setCustomValidity("sorry!");
+                if (!e.target.validity.valid) {
+                    let errorMessage;
+                    if (e.target.value === '')
+                        errorMessage = '';
+                    else errorMessage = 'Wrong email adress format';
+                    this.setState({
+                        email_errorMessage: errorMessage,
+                    })
                 } else {
-                    e.target.setCustomValidity("");
+                    this.setState({
+                        email_errorMessage: undefined,
+                    })
                 }
                 break;
-            case 'IPAddress':
+            case 'IPAdress':
                 this.setState({
                     user: {
                         ...this.state.user,
-                        IPAddress: e.target.value,
+                        IPAdress: e.target.value,
                     }
                 });
+
+                if (!e.target.validity.valid) {
+                    let errorMessage;
+                    if (e.target.value === '')
+                        errorMessage = '';
+                    else errorMessage = 'Wrong IP adress format';
+                    this.setState({
+                        IPAdress_errorMessage: errorMessage,
+                    })
+                } else {
+                    this.setState({
+                        IPAdress_errorMessage: undefined,
+                    })
+                }
                 break;
         }
     };
@@ -53,21 +77,24 @@ export class UserDataForm extends React.Component<UserDataFormProps, UserDataFor
         }
     };
 
-
     render() {
         return <div>
             <form onSubmit={this.handleSubmit}>
                 <div>
                     <label>nickname</label>
                     <input name='nickname' onChange={this.handleChange}/>
+
                 </div>
                 <div>
                     <label>email</label>
-                    <input name='email' onChange={this.handleChange} type='email'/>
+                    <input name='email' onChange={this.handleChange} required type='email'/>
+                    <div>{this.state.email_errorMessage}</div>
                 </div>
                 <div>
-                    <label>IPAddress</label>
-                    <input name='IPAddress' onChange={this.handleChange} required pattern='^[0-255].[0-255].[0-255].[0-255]$'/>
+                    <label>IPAdress</label>
+                    <input name='IPAdress' onChange={this.handleChange}
+                          required pattern='^[0-255].[0-255].[0-255].[0-255]$'/>
+                    <div>{this.state.IPAdress_errorMessage}</div>
                 </div>
                 <input type='submit' value='Submit'/>
             </form>

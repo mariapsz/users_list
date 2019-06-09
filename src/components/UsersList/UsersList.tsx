@@ -22,7 +22,7 @@ export class UsersList extends React.Component<UsersListProps, UsersListState> {
                   {user.email}
               </div>
               <div>
-                  {user.IPAddress}
+                  {user.IPAdress}
               </div>
           </div>
       ))
