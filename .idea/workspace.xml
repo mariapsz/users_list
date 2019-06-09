@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="dc4554e8-63cb-479a-ae33-315a211dbed3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/User.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserDataForm/UserDataForm.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserDataForm/UserDataForm.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UserDataForm/UserDataForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserDataForm/UserDataForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UserDataForm/UserDataFormState.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserDataForm/UserDataFormState.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UsersList/UsersList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UsersList/UsersList.tsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,18 +19,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/UsersPage/UsersPageState.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="33" selection-start-column="33" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/UsersList/UsersList.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
+            <state relative-caret-position="441">
               <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
@@ -70,8 +60,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/UserDataForm/UserDataForm.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="63" column="24" lean-forward="true" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
+            <state relative-caret-position="173">
+              <caret line="87" column="8" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="8" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -82,8 +72,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/UserDataForm/UserDataFormState.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+            <state relative-caret-position="126">
+              <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -91,8 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/UserDataForm/UserDataForm.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="84">
+              <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -116,6 +106,11 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -135,9 +130,10 @@
         <option value="$PROJECT_DIR$/src/components/UsersList/UsersListProps.ts" />
         <option value="$PROJECT_DIR$/src/components/UsersPage/UsersPage.tsx" />
         <option value="$PROJECT_DIR$/src/components/UsersList/UsersList.tsx" />
+        <option value="$PROJECT_DIR$/src/classes/User.ts" />
+        <option value="$PROJECT_DIR$/src/components/UserDataForm/tempStyles.css" />
         <option value="$PROJECT_DIR$/src/components/UserDataForm/UserDataForm.css" />
         <option value="$PROJECT_DIR$/src/components/UserDataForm/UserDataFormState.ts" />
-        <option value="$PROJECT_DIR$/src/classes/User.ts" />
         <option value="$PROJECT_DIR$/src/components/UserDataForm/UserDataForm.tsx" />
       </list>
     </option>
@@ -245,12 +241,12 @@
       <updated>1559902808808</updated>
       <workItem from="1559902810107" duration="11253000" />
       <workItem from="1559947944711" duration="6477000" />
-      <workItem from="1560097107768" duration="2026000" />
+      <workItem from="1560097107768" duration="4889000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19756000" />
+    <option name="totallyTimeSpent" value="22619000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -324,37 +320,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UsersList/UsersList.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UserDataForm/UserDataFormProps.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UsersList/UsersListProps.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UserDataForm/UserDataForm.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/react-app-env.d.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -368,10 +333,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UserDataForm/UserDataFormState.ts">
+    <entry file="file://$PROJECT_DIR$/src/components/UserDataForm/tempStyles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/UsersList/UsersList.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/UsersList/UsersListProps.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/UserDataForm/UserDataForm.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -382,10 +371,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/UserDataForm/UserDataFormState.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/UserDataForm/UserDataFormProps.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/UserDataForm/UserDataForm.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="63" column="24" lean-forward="true" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
+        <state relative-caret-position="173">
+          <caret line="87" column="8" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="8" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
