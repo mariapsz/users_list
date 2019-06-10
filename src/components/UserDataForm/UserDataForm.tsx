@@ -34,12 +34,8 @@ export class UserDataForm extends React.Component<UserDataFormProps, UserDataFor
                 });
 
                 if (!e.target.validity.valid) {
-                    let errorMessage;
-                    if (e.target.value === '')
-                        errorMessage = '';
-                    else errorMessage = 'Wrong email adress format';
                     this.setState({
-                        email_errorMessage: errorMessage,
+                        email_errorMessage: e.target.value === '' ? '' : 'Wrong email adress format',
                     })
                 } else {
                     this.setState({
@@ -56,12 +52,8 @@ export class UserDataForm extends React.Component<UserDataFormProps, UserDataFor
                 });
 
                 if (!e.target.validity.valid) {
-                    let errorMessage;
-                    if (e.target.value === '')
-                        errorMessage = '';
-                    else errorMessage = 'Wrong IP adress format';
                     this.setState({
-                        IPAdress_errorMessage: errorMessage,
+                        IPAdress_errorMessage: e.target.value === '' ? '' : 'Wrong IP adress format',
                     })
                 } else {
                     this.setState({
@@ -104,7 +96,7 @@ export class UserDataForm extends React.Component<UserDataFormProps, UserDataFor
                 <div>
                     <label>IPAdress</label>
                     <input onInvalid={this.handleInvalid} name='IPAdress' onChange={this.handleChange}
-                           required pattern='^[0-255].[0-255].[0-255].[0-255]$'/>
+                           required pattern='^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$'/>
                     <div>{this.state.IPAdress_errorMessage}</div>
                 </div>
                 <input disabled={this.state.isDisabled} type='submit' value='Submit'/>
