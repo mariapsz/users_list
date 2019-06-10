@@ -1,5 +1,6 @@
 import {User} from '../../classes/User';
 
-export interface UsersPageState {
+export interface IDeleteButtonProps {
+    user: User,
     usersList: User[],
 }

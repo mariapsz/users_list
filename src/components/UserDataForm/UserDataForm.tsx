@@ -76,11 +76,9 @@ export class UserDataForm extends React.Component<UserDataFormProps, UserDataFor
         if (this.state.user) {
             this.props.handler(this.state.user);
         }
-        console.log(e);
     };
 
     handleInvalid = (e: any) => {
-
         e.preventDefault();
     };
 
