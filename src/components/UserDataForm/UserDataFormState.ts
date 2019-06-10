@@ -5,4 +5,5 @@ export interface UserDataFormState {
     email_errorMessage?: string;
     IPAdress_errorMessage?: string;
     isDisabled: boolean;
+    onSubmitErrorMessage?: string;
 }

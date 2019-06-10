@@ -20,7 +20,7 @@ export const UsersList = (props: UsersListProps) => {
                 <div>
                     <DeleteButton
                         user={user}
-                        usersList={props.usersList}
+                        userRemovalHandler={props.userRemovalHandler}
                     />
                 </div>
             </div>
@@ -29,5 +29,13 @@ export const UsersList = (props: UsersListProps) => {
 
     return <div>
         {getUsersList()}
+        <div>
+            <button onClick={props.sortByNicknameHandler}>
+                Sort by nickname
+            </button>
+            <button onClick={props.sortByEmailHandler}>
+                Sort by email
+            </button>
+        </div>
     </div>
 };

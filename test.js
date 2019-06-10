@@ -1,10 +1,10 @@
 let person1 = {
-    name: 'anna',
+    name: 'anna cćŹfźfz',
     surname: 'kowalska',
 };
 
 let person2 = {
-    name: 'b',
+    name: 'anna sad',
     surname: 'bowalska',
 };
 
@@ -23,7 +23,4 @@ let person5 = {
     surname: 'kowalska',
 };
 
-let arr = [person1, person2, person3, person4, person5];
-let idx = arr.findIndex( a => a === person3);
-console.log(arr.splice(idx, 1));
-setTimeout(()=> console.log('\n\n', arr), 1000);
+console.log(person1.name < person2.name)

@@ -3,6 +3,7 @@ import {UserDataFormProps} from './UserDataFormProps';
 import {User} from '../../classes/User';
 import {UserDataFormState} from './UserDataFormState';
 import './UserDataForm.css';
+
 export class UserDataForm extends React.Component<UserDataFormProps, UserDataFormState> {
 
     constructor(props: UserDataFormProps) {
@@ -73,9 +74,7 @@ export class UserDataForm extends React.Component<UserDataFormProps, UserDataFor
 
     handleSubmit = (e: any) => {
         e.preventDefault();
-        if (this.state.user) {
-            this.props.handler(this.state.user);
-        }
+        this.setState({onSubmitErrorMessage: this.props.handler(this.state.user)})
     };
 
     handleInvalid = (e: any) => {
@@ -84,7 +83,7 @@ export class UserDataForm extends React.Component<UserDataFormProps, UserDataFor
 
     handleFormState = (e: any) => {
         this.setState({
-            isDisabled:  !e.currentTarget.reportValidity(),
+            isDisabled: !e.currentTarget.reportValidity(),
         })
     };
 
@@ -98,17 +97,19 @@ export class UserDataForm extends React.Component<UserDataFormProps, UserDataFor
                 </div>
                 <div>
                     <label>email</label>
-                    <input  onInvalid={this.handleInvalid} name='email' onChange={this.handleChange} required type='email'/>
+                    <input onInvalid={this.handleInvalid} name='email' onChange={this.handleChange} required
+                           type='email'/>
                     <div>{this.state.email_errorMessage}</div>
                 </div>
                 <div>
                     <label>IPAdress</label>
                     <input onInvalid={this.handleInvalid} name='IPAdress' onChange={this.handleChange}
-                          required pattern='^[0-255].[0-255].[0-255].[0-255]$'/>
+                           required pattern='^[0-255].[0-255].[0-255].[0-255]$'/>
                     <div>{this.state.IPAdress_errorMessage}</div>
                 </div>
                 <input disabled={this.state.isDisabled} type='submit' value='Submit'/>
             </form>
+            <div>{this.state.onSubmitErrorMessage}</div>
         </div>
     }
 };
