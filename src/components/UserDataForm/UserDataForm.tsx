@@ -109,7 +109,8 @@ export class UserDataForm extends React.Component<UserDataFormProps, UserDataFor
                             <Input value={this.state.user.email} onInvalid={this.handleInvalid} name='email'
                                    onChange={this.handleChange} required
                                    type='email'/>
-                            <ErrorMessageWrapper>{this.state.email_errorMessage !== '' && this.state.email_errorMessage != undefined ? <ErrorMessage>{this.state.email_errorMessage}</ErrorMessage> : ''}</ErrorMessageWrapper>
+                            <ErrorMessageWrapper>{this.state.email_errorMessage !== '' && this.state.email_errorMessage != undefined ?
+                                <ErrorMessage>{this.state.email_errorMessage}</ErrorMessage> : ''}</ErrorMessageWrapper>
                         </InputWrapper>
                     </FormRow>
                     <FormRow>
@@ -119,7 +120,8 @@ export class UserDataForm extends React.Component<UserDataFormProps, UserDataFor
                                    onChange={this.handleChange}
                                    required
                                    pattern='^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$'/>
-                            <div>{this.state.IPAdress_errorMessage}</div>
+                            <ErrorMessageWrapper>{this.state.IPAdress_errorMessage !== '' && this.state.IPAdress_errorMessage != undefined ?
+                                <ErrorMessage>{this.state.IPAdress_errorMessage}</ErrorMessage> : ''}</ErrorMessageWrapper>
                         </InputWrapper>
                     </FormRow>
                 </RowWrapper>

@@ -18,6 +18,9 @@ export const Input = styled.input`
    :focus {
    outline-width: 0;
    }
+   :invalid {
+   border-color: #E65A8A;
+   }
 `;
 
 export const Form = styled.form`
@@ -52,25 +55,27 @@ export const SubmitButton = styled.input`
 
 export const ErrorMessage = styled.div`
     position: relative;
-    background: #88b7d5;
+    background: #FCEBF1;    
+    padding: 3%;
+    font-size: 0.8rem;
+    border-radius: 7%/70%;
+    color: #E65A8A;
     
     :after, :before {
-      right: 100%;
-      top: 50%;
+      right: 99%;
       border: solid transparent;
       content: "";
       position: absolute;
     }
     
     :before {
-      border-color: rgba(194, 225, 245, 0);
-      border-right-color: #c2e1f5;
+      border-right-color: #FCEBF1;
     }
     
     :after {
-      border-color: rgba(136, 183, 213, 0);
-      border-right-color: #88b7d5;
-      border-width: 5px;
+      border-right-color: #FCEBF1;
+      border-width: 0.4rem;
+      top: 32%;
     }
 `;
 
@@ -78,5 +83,5 @@ export const ErrorMessageWrapper = styled.div`
     width: 40%;
     float: right;
     position: relative;
-    right: -8%;
+    right: -4%;
 `;
