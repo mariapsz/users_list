@@ -2,29 +2,28 @@ import * as React from 'react';
 import {UsersListProps} from './UsersListProps';
 import {DeleteButton} from '../DeleteButton/DeleteButton';
 import confirm from '../ConfirmationDialog/confirm';
+import {ListCell, ListHeader, ListRow, ListWrapper} from './UsersListStyles';
 
 
 export const UsersList = (props: UsersListProps) => {
 
     const getUsersList = (): JSX.Element[] => (
         props.usersList.map((user, i) => (
-            <div key={i}>
-                <div>
+            <ListRow key={i}>
+                <ListCell>
                     {user.nickName}
-                </div>
-                <div>
+                </ListCell>
+                <ListCell>
                     {user.email}
-                </div>
-                <div>
+                </ListCell>
+                <ListCell>
                     {user.IPAdress}
-                </div>
-                <div>
                     <DeleteButton
                         user={user}
                         userRemovalHandler={props.userRemovalHandler}
                     />
-                </div>
-            </div>
+                </ListCell>
+            </ListRow>
         ))
     );
 
@@ -33,13 +32,27 @@ export const UsersList = (props: UsersListProps) => {
             () => {
                 props.entireListRemovalHandler();
             },
-            () => {}
+            () => {
+            }
         )
     };
 
 
     return <div>
-        {getUsersList()}
+        <ListWrapper>
+            <ListHeader>
+                <ListCell>
+                    Nickname
+                </ListCell>
+                <ListCell>
+                    Email
+                </ListCell>
+                <ListCell>
+                    IP adress
+                </ListCell>
+            </ListHeader>
+            {getUsersList()}
+        </ListWrapper>
         <div>
             <button onClick={props.sortByNicknameHandler}>
                 Sort by nickname
