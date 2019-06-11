@@ -3,6 +3,7 @@ import {UsersPageState} from './UsersPageState';
 import {UserDataForm} from '../UserDataForm/UserDataForm';
 import {UsersList} from '../UsersList/UsersList';
 import {User} from '../../classes/User';
+import {Header, PageWrapper} from './UsersPageStyles';
 
 export class UsersPage extends React.Component<{}, UsersPageState> {
 
@@ -64,7 +65,8 @@ export class UsersPage extends React.Component<{}, UsersPageState> {
 
     render() {
         return (
-            <div>
+            <PageWrapper>
+                <Header>Crypto users</Header>
                 <UserDataForm
                     handler={this.handleUserSubmit}
                     usersList={this.state.usersList}
@@ -76,7 +78,7 @@ export class UsersPage extends React.Component<{}, UsersPageState> {
                     sortByNicknameHandler={this.sortByNicknameHandler}
                     entireListRemovalHandler={this.entireListRemovalHandler}
                 />
-            </div>)
+            </PageWrapper>)
     }
 }
 

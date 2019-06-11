@@ -9,6 +9,7 @@
     "@types/react-confirm": "^0.1.4",
     "@types/react-dom": "16.8.4",
     "@types/react-modal": "^3.8.2",
+    "@types/styled-components": "^4.1.16",
     "react": "^16.8.6",
     "react-bootstrap-modal": "^4.2.0",
     "react-confirm": "^0.1.18",
@@ -16,6 +17,7 @@
     "react-dom": "^16.8.6",
     "react-modal": "^3.8.1",
     "react-scripts": "3.0.1",
+    "styled-components": "^4.3.1",
     "typescript": "3.5.1"
   },
   "scripts": {
