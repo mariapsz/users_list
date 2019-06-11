@@ -2,7 +2,15 @@ import * as React from 'react';
 import {UsersListProps} from './UsersListProps';
 import {DeleteButton} from '../DeleteButton/DeleteButton';
 import confirm from '../ConfirmationDialog/confirm';
-import {ListCell, ListHeader, ListRow, ListWrapper} from './UsersListStyles';
+import {
+    IPAdressListCell, IPAdressWrapper,
+    ListCell,
+    ListHeader,
+    ListHeaderCell,
+    ListRow,
+    ListWrapper,
+    RemoveEntireListButton
+} from './UsersListStyles';
 
 
 export const UsersList = (props: UsersListProps) => {
@@ -16,13 +24,15 @@ export const UsersList = (props: UsersListProps) => {
                 <ListCell>
                     {user.email}
                 </ListCell>
-                <ListCell>
+                <IPAdressListCell>
+                    <IPAdressWrapper>
                     {user.IPAdress}
+                    </IPAdressWrapper>
                     <DeleteButton
                         user={user}
                         userRemovalHandler={props.userRemovalHandler}
                     />
-                </ListCell>
+                </IPAdressListCell>
             </ListRow>
         ))
     );
@@ -41,12 +51,12 @@ export const UsersList = (props: UsersListProps) => {
     return <div>
         <ListWrapper>
             <ListHeader>
-                <ListCell>
+                <ListHeaderCell onClick={props.sortByNicknameHandler}>
                     Nickname
-                </ListCell>
-                <ListCell>
+                </ListHeaderCell>
+                <ListHeaderCell onClick={props.sortByEmailHandler}>
                     Email
-                </ListCell>
+                </ListHeaderCell>
                 <ListCell>
                     IP adress
                 </ListCell>
@@ -54,13 +64,7 @@ export const UsersList = (props: UsersListProps) => {
             {getUsersList()}
         </ListWrapper>
         <div>
-            <button onClick={props.sortByNicknameHandler}>
-                Sort by nickname
-            </button>
-            <button onClick={props.sortByEmailHandler}>
-                Sort by email
-            </button>
-            {props.usersList.length > 0 ? <button onClick={removeEntireList}>Remove entire list</button> : null}
+            {props.usersList.length > 0 ? <RemoveEntireListButton onClick={removeEntireList}>Remove entire list</RemoveEntireListButton> : null}
         </div>
     </div>
 };

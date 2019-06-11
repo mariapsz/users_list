@@ -45,8 +45,8 @@ export const InputWrapper = styled.div`
 `;
 
 export const SubmitButton = styled.input`
-    width: 25%;
-    height: 15%;
+    width: 20vh;
+    height: 6vh;
     border-radius: 20%/50%;
     border: none;
     color: white;

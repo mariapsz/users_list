@@ -8,7 +8,13 @@ const Confirmation = (props: any) => {
 
     return (
         <div className="static-modal">
-            <Modal isOpen={true}>
+            <Modal isOpen={true} style={{
+                overlay: {
+                    width: '70vh',
+                    height: '50vh',
+                }
+            }
+            }>
                 {props.confirmation}
                 <button onClick={() => props.proceed()}>YES</button>
                 <button onClick={() => props.cancel()}>CANCEL</button>

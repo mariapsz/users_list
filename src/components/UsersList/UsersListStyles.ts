@@ -21,3 +21,27 @@ export const ListCell = styled.div`
     text-align: left;
     width: 100%;
 `;
+
+export const ListHeaderCell = styled(ListCell)`
+    :hover {
+      background: cadetblue;
+      cursor: pointer;
+    }
+`;
+
+export const IPAdressWrapper = styled.div`
+    width: 70%;
+`;
+
+export const IPAdressListCell = styled(ListCell)`
+    display: flex;
+`;
+
+export const RemoveEntireListButton = styled.button`
+    width: 20vh;
+    height: 6vh;
+    border-radius: 20%/50%;
+    border: none;
+    color: white;
+    background-color: #e14e5d;
+`;

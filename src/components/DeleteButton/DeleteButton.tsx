@@ -1,6 +1,7 @@
 import {IDeleteButtonProps} from './IDeleteButtonProps';
 import * as React from 'react';
 import confirm from '../ConfirmationDialog/confirm';
+import {DeleteBtn} from './DeleteButtonStyles';
 
 export const DeleteButton = (props: IDeleteButtonProps) => {
 
@@ -13,11 +14,8 @@ export const DeleteButton = (props: IDeleteButtonProps) => {
         )
     };
 
-    return (
-        <div>
-            <button onClick={removeUser}>
-                Remove user
-            </button>
-        </div>
+    return (<DeleteBtn onClick={removeUser}>
+                &#10006;
+    </DeleteBtn>
     )
 };
