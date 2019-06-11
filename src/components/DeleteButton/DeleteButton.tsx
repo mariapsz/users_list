@@ -4,21 +4,12 @@ import confirm from '../ConfirmationDialog/confirm';
 
 export const DeleteButton = (props: IDeleteButtonProps) => {
 
-
-
     const removeUser = () => {
-        confirm('Are you sure?').then(
-            (result) => {
-                // `proceed` callback
+        confirm(`Are you sure? User ${props.user.nickName} will be removed.`).then(
+            () => {
                 props.userRemovalHandler(props.user);
-                console.log('proceed called');
-                console.log(result);
             },
-            (result) => {
-                // `cancel` callback
-                console.log('cancel called');
-                console.log(result)
-            }
+            () => {}
         )
     };
 

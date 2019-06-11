@@ -56,6 +56,12 @@ export class UsersPage extends React.Component<{}, UsersPageState> {
         })
     };
 
+    entireListRemovalHandler = () => {
+        this.setState({
+            usersList: [],
+        })
+    };
+
     render() {
         return (
             <div>
@@ -68,6 +74,7 @@ export class UsersPage extends React.Component<{}, UsersPageState> {
                     userRemovalHandler={this.handleUserRemoval}
                     sortByEmailHandler={this.sortByEmailHandler}
                     sortByNicknameHandler={this.sortByNicknameHandler}
+                    entireListRemovalHandler={this.entireListRemovalHandler}
                 />
             </div>)
     }

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {UsersListProps} from './UsersListProps';
 import {DeleteButton} from '../DeleteButton/DeleteButton';
+import confirm from '../ConfirmationDialog/confirm';
 
 
 export const UsersList = (props: UsersListProps) => {
@@ -27,6 +28,16 @@ export const UsersList = (props: UsersListProps) => {
         ))
     );
 
+    const removeEntireList = (): void => {
+        confirm(`Are you sure? Entire list will be removed.`).then(
+            () => {
+                props.entireListRemovalHandler();
+            },
+            () => {}
+        )
+    };
+
+
     return <div>
         {getUsersList()}
         <div>
@@ -36,6 +47,7 @@ export const UsersList = (props: UsersListProps) => {
             <button onClick={props.sortByEmailHandler}>
                 Sort by email
             </button>
+            {props.usersList.length > 0 ? <button onClick={removeEntireList}>Remove entire list</button> : null}
         </div>
     </div>
 };
